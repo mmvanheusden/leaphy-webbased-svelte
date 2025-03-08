@@ -453,7 +453,7 @@ export default [
 					type: "bluetooth_on_disconnect",
 				},
 				{
-					type: "bluetooth_on_characteristic_updated",
+					type: "bluetooth_on_characteristic_update",
 					inputs: {
 						NAME: text("LED"),
 					},
@@ -461,7 +461,7 @@ export default [
 			],
 			[
 				{
-					type: "create_binary_characteristic",
+					type: "bluetooth_create_binary_characteristic",
 					inputs: {
 						NAME: text("LED"),
 						INITIAL_VALUE: boolean(),
@@ -470,7 +470,7 @@ export default [
 			],
 			[
 				{
-					type: "create_string_characteristic",
+					type: "bluetooth_create_string_characteristic",
 					inputs: {
 						NAME: text("DISPLAY"),
 						INITIAL_VALUE: text("Hello"),
@@ -479,7 +479,7 @@ export default [
 			],
 			[
 				{
-					type: "bluetooth_bool_characteristic_read",
+					type: "bluetooth_read_bool_characteristic",
 					inputs: {
 						NAME: text("LED"),
 					}
@@ -487,7 +487,7 @@ export default [
 			],
 			[
 				{
-					type: "bluetooth_string_characteristic_read",
+					type: "bluetooth_read_string_characteristic",
 					inputs: {
 						NAME: text("DISPLAY"),
 					}
